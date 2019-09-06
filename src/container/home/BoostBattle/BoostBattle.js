@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, FlatList, View, Image, Text } from 'react-native';
 import * as ImageAssets from '../../../_ui/_image/images';
 import * as Icon from '../../../_ui/_icon/icons';
+import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
 
 
 const BoostBattleItem = ({ item }) => {
@@ -9,7 +10,7 @@ const BoostBattleItem = ({ item }) => {
     const participant2 = item.participant[1];
     return (
         <View style={[{ flexDirection: "row", marginHorizontal: 16, marginBottom: 16, position: "relative" }, item.id === 1 && { marginTop: 30 }]}>
-            <Image source={Icon.boostbattle} style={{ position: "absolute", width: 50, height: 50, zIndex: 20, left: 148, top: 60 }} />
+            <Image source={Icon.boostbattle} style={{ position: "absolute", width: 50, height: 50, zIndex: 20, left: getWidth(148), top: getHeight(60) }} />
             <View style={[styles.imgWrapper, borderLeft]}>
                 <Image source={participant1.image} style={[styles.img, borderLeft]} />
                 <View style={[styles.imgOver, borderLeft, { borderRightWidth: 1.5, borderRightColor: "white" }]}>

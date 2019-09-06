@@ -64,8 +64,6 @@ class IconLove extends React.Component {
 
 const getTabBarIcon = (navigation, focused, tintColor) => {
 	const { routeName } = navigation.state;
-	let IconComponent = Ionicons;
-	let iconName;
 
 	switch (routeName) {
 		case "Home":

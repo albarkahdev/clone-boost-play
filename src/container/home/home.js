@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1, backgroundColor: "#EF3026" }}>
+            <SafeAreaView style={{ flex: 1, /* backgroundColor: "#EF3026" */ }}>
                 <ScrollView
                     style={{ flex: 1, backgroundColor: "white" }}
                     refreshControl={
