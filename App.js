@@ -1,5 +1,4 @@
 import React from 'react';
-import { Platform } from 'react-native'; 
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import LoginScreen from './src/container/auth/Login';
@@ -19,8 +18,7 @@ const AuthStack = createStackNavigator(
 		Register: RegisterScreen
 	},
 	{
-		initialRouteName: 'Login',
-		headerMode: Platform.OS === 'android' ? 'screen' : 'float'
+		initialRouteName: 'Login'
 	}
 );
 

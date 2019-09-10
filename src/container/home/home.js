@@ -1,5 +1,6 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, RefreshControl, View, Text } from 'react-native';
+import { SafeAreaView, View, Text } from 'react-native';
+import ScrollViewWithRefresh from '../../common/scroll/ScrollViewWithRefresh';
 import BoostCashWithBackground from './BoostCashWithBackground/BoostCashWithBackground';
 import BoostMore from './BoostMore/BoostMore';
 import BoostBattleBanner from './BoostBattleBanner/BoostBattleBanner';
@@ -11,8 +12,6 @@ import { HR } from '../../common';
 
 
 export default class HomeScreen extends React.Component {
-    state = { refreshing: false }
-
 	static navigationOptions = ({ navigation }) => {
 		return {
             headerLeft: (
@@ -23,32 +22,10 @@ export default class HomeScreen extends React.Component {
 		};
 	};
 
-    _onRefresh = () => {
-        this.setState({ refreshing: true });
-
-        this.timeOutRefresh = setTimeout(() => {
-            this.setState({ refreshing: false })
-        }, 1000);
-    }
-
-    componentWillUnmount() {
-        if (this.timeOutRefresh) {
-            clearTimeout(this.timeOutRefresh);
-        }
-    }
-
     render() {
         return (
             <SafeAreaView style={{ flex: 1, /* backgroundColor: "#EF3026" */ }}>
-                <ScrollView
-                    style={{ flex: 1, backgroundColor: "white" }}
-                    refreshControl={
-                        <RefreshControl
-                            refreshing={this.state.refreshing}
-                            onRefresh={this._onRefresh}
-                        />
-                    }
-                >
+                <ScrollViewWithRefresh>
                     <BoostCashWithBackground />
                     <BoostMore {...this.props} />
                     <HR />
@@ -61,7 +38,7 @@ export default class HomeScreen extends React.Component {
                     <BoostQuiz />
                     <HR />
                     <BoostBattle />
-                </ScrollView>
+                </ScrollViewWithRefresh>
             </SafeAreaView>
         );
     }

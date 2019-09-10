@@ -40,7 +40,7 @@ class AllListBoostSpotScreen extends React.Component {
         const boostspots = navigation.getParam('boostspots', { title: "Boost Spots" });
         return {
             headerLeft: (
-                <TouchableOpacity style={{ padding: 10 }} onPress={() => navigation.navigate("Main")}>
+                <TouchableOpacity style={{ padding: 10 }} onPress={() => navigation.navigate("Boost Spot")}>
                     <MaterialIcons name="arrow-back" size={25} />
                 </TouchableOpacity>
             ),
@@ -79,11 +79,4 @@ class AllListBoostSpotScreen extends React.Component {
 }
 
 
-export default AllListBoostSpotStack = createStackNavigator(
-    {
-        AllListBoostSpot: AllListBoostSpotScreen
-    },
-    {
-        headerMode: Platform.OS === 'android' ? 'screen' : 'float'
-    }
-);
+export default AllListBoostSpotStack = createStackNavigator({ AllListBoostSpot: AllListBoostSpotScreen });

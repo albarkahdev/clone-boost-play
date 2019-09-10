@@ -1,7 +1,7 @@
 import React from 'react';
-import { Platform, SafeAreaView, ScrollView, View } from 'react-native';
+import { SafeAreaView, ScrollView, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import HeaderBoostSpot from './header/HeaderBoostSpot';
+import HeaderBoost from '../../common/header/HeaderBoost';
 import SearchBoostSpot from './search_boost_spot/SearchBoostSpot';
 import ListBoostSpot from './list_boost_spot/ListBoostSpot';
 import { HR } from '../../common/line/hr';
@@ -10,7 +10,7 @@ import { dataPilihanEditor, dataTerdekat } from './dummy/datadummy';
 
 class BoostSpotScreen extends React.Component {
     static navigationOptions = ({ navigation }) => {
-        return HeaderBoostSpot();
+        return HeaderBoost({ right: "map" });
     };
 
     render() {
@@ -29,11 +29,4 @@ class BoostSpotScreen extends React.Component {
     }
 }
 
-export default BoostSpotStack = createStackNavigator(
-    {
-        "Boost Spot": BoostSpotScreen
-    },
-    {
-        headerMode: Platform.OS === 'android' ? 'screen' : 'float'
-    }
-);
+export default BoostSpotStack = createStackNavigator({ "Boost Spot": BoostSpotScreen });

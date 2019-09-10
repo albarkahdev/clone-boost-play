@@ -8,11 +8,5 @@ module.exports = {
         ios: null,
       },
     },
-    'react-native-linear-gradient': {
-      platforms: {
-        android: null, // disable Android platform, other platforms will still autolink if provided
-        ios: null,
-      },
-    },
   }
 };

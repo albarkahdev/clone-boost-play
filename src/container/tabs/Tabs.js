@@ -6,7 +6,8 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import { Platform, View, Image, Text } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from '../home/home';
-import BoostSpotScreen from '../boost_spot/boost_spot';
+import BoostSpotStack from '../boost_spot/boost_spot';
+import MyDealsStack from '../my_deals/my_deals';
 import * as Icon from '../../_ui/_icon/icons';
 
 export const TemplateScreen = ({ title }) => {
@@ -23,36 +24,28 @@ class LoveScreen extends React.Component {
 	}
 }
 
-class MyDealsScreen extends React.Component {
-	render() {
-		return <TemplateScreen title="My Deals" />;
-	}
-}
-
 class AccountScreen extends React.Component {
 	render() {
 		return <TemplateScreen title="Account" />;
 	}
 }
 
-class IconLove extends React.Component {
-	render() {
-		return (
-			<View
-				style={{
-					position: 'absolute',
-					top: Platform.OS === 'android' ? -25 : -20,
-					backgroundColor: '#EF3026',
-					borderRadius: 45,
-					width: 67,
-					height: 67,
-					justifyContent: 'center',
-					alignItems: 'center',
-				}}>
-				<Image source={Icon.boost} style={{ width: 32, height: 32 }} />
-			</View>
-		);
-	}
+const IconLove = (props) => {
+	return (
+		<View
+			style={{
+				position: 'absolute',
+				top: Platform.OS === 'android' ? -25 : -20,
+				backgroundColor: '#EF3026',
+				borderRadius: 45,
+				width: 67,
+				height: 67,
+				justifyContent: 'center',
+				alignItems: 'center',
+			}}>
+			<Image source={Icon.boost} style={{ width: 32, height: 32 }} />
+		</View>
+	);
 }
 
 const getTabBarIcon = (navigation, focused, tintColor) => {
@@ -92,10 +85,10 @@ const getTabBarOnPress = (navigation, defaultHandler) => {
 
 export default createBottomTabNavigator(
 	{
-		"Boost Spot": { screen: BoostSpotScreen },
+		"My Deals": { screen: MyDealsStack },
 		Home: { screen: HomeScreen },
 		Love: { screen: LoveScreen },
-		"My Deals": { screen: MyDealsScreen },
+		"Boost Spot": { screen: BoostSpotStack },
 		Account: { screen: AccountScreen },
 	},
 	{
@@ -104,7 +97,7 @@ export default createBottomTabNavigator(
 				getTabBarIcon(navigation, focused, tintColor),
 			tabBarLabel: ({ focused, tintColor }) =>
 				getTabBarLabel(navigation, focused, tintColor),
-			tabBarOnPress: ({navigation, defaultHandler}) => {
+			tabBarOnPress: ({ navigation, defaultHandler }) => {
 				getTabBarOnPress(navigation, defaultHandler)
 			}
 		}),

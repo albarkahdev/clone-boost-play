@@ -11,6 +11,10 @@ import nasiuduk from '../../../assets/image/nasiuduk.jpeg';
 import nasipadang from '../../../assets/image/nasipadang.jpeg';
 import malaysia from '../../../assets/image/malaysia.jpeg';
 import singapore from '../../../assets/image/singapore.jpeg';
+import deal from '../../../assets/image/deal.png';
 
-export { boost, boostspot, handboost, boostbattle, promozone, fourhands,
-    coffeetips, coffeehits, sma, nasiuduk, nasipadang, malaysia, singapore };
+export {
+    boost, boostspot, handboost, boostbattle, promozone, fourhands,
+    coffeetips, coffeehits, sma, nasiuduk, nasipadang, malaysia, singapore,
+    deal
+};
