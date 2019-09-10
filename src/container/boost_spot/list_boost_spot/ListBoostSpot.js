@@ -33,7 +33,7 @@ export default BoostSpotCard = (props) => {
         <View style={{ marginHorizontal: 16, marginVertical: 10, marginTop: props.marginTop }}>
             <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 15 }}>
                 <Text style={{ fontSize: 20, fontWeight: "bold" }}>{title}</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => props.navigation.navigate("AllListBoostSpot", { boostspots: props.data })}>
                     <Text style={{ fontSize: 16, fontWeight: "bold" }}>Lihat semua ></Text>
                 </TouchableOpacity>
             </View>

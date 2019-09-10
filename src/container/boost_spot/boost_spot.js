@@ -19,9 +19,9 @@ class BoostSpotScreen extends React.Component {
                 <ScrollView style={{ flex: 1 }}>
                     <View style={{ flex: 1 }}>
                         <SearchBoostSpot />
-                        <ListBoostSpot data={dataPilihanEditor} />
+                        <ListBoostSpot data={dataPilihanEditor} {...this.props} />
                         <HR full />
-                        <ListBoostSpot data={dataTerdekat} marginTop={25} />
+                        <ListBoostSpot data={dataTerdekat} marginTop={25} {...this.props} />
                     </View>
                 </ScrollView>
             </SafeAreaView>
@@ -31,7 +31,7 @@ class BoostSpotScreen extends React.Component {
 
 export default BoostSpotStack = createStackNavigator(
     {
-        "Boost Spot": BoostSpotScreen,
+        "Boost Spot": BoostSpotScreen
     },
     {
         headerMode: Platform.OS === 'android' ? 'screen' : 'float'
