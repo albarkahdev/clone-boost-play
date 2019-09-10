@@ -12,7 +12,7 @@ const BoostTipsImage = (props) => {
     )
 };
 
-export const BoostTipsNInfo = (props) => {
+export default BoostTipsNInfo = (props) => {
     return (
         <View style={{ marginHorizontal: 16, marginVertical: 30 }}>
             <TitleHome title={"BOOST TIPS & INFO"} bold />

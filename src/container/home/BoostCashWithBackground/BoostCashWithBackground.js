@@ -73,7 +73,7 @@ const BoostCash = (props) => {
 	)
 }
 
-export const BoostCashWithBackground = (props) => {
+export default BoostCashWithBackground = (props) => {
 	return (
 		<View>
 			<BackgroundHalfCircle />

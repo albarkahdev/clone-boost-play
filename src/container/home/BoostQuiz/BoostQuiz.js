@@ -66,7 +66,7 @@ const ListBoostQuiz = (props) => {
     );
 }
 
-export const BoostQuiz = (props) => {
+export default BoostQuiz = (props) => {
     return (
         <View style={{ marginVertical: 30 }}>
             <View style={{ marginHorizontal: 16 }}>

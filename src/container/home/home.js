@@ -1,17 +1,27 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, RefreshControl } from 'react-native';
-import { BoostCashWithBackground } from './BoostCashWithBackground/BoostCashWithBackground';
-import { BoostMore } from './BoostMore/BoostMore';
-import { BoostBattleBanner } from './BoostBattleBanner/BoostBattleBanner';
-import { BoostPromo } from './BoostPromo/BoostPromo';
-import { BoostTipsNInfo } from './BoostTipsNInfo/BoostTipsNInfo';
-import { BoostQuiz } from './BoostQuiz/BoostQuiz';
-import { BoostBattle } from './BoostBattle/BoostBattle';
+import { SafeAreaView, ScrollView, RefreshControl, View, Text } from 'react-native';
+import BoostCashWithBackground from './BoostCashWithBackground/BoostCashWithBackground';
+import BoostMore from './BoostMore/BoostMore';
+import BoostBattleBanner from './BoostBattleBanner/BoostBattleBanner';
+import BoostPromo from './BoostPromo/BoostPromo';
+import BoostTipsNInfo from './BoostTipsNInfo/BoostTipsNInfo';
+import BoostQuiz from './BoostQuiz/BoostQuiz';
+import BoostBattle from './BoostBattle/BoostBattle';
 import { HR } from '../../common';
 
 
 export default class HomeScreen extends React.Component {
     state = { refreshing: false }
+
+	static navigationOptions = ({ navigation }) => {
+		return {
+            headerLeft: (
+                <View style={{ padding: 10 }}>
+                    <Text>BoostSpot</Text>
+                </View>
+            ),
+		};
+	};
 
     _onRefresh = () => {
         this.setState({ refreshing: true });
@@ -40,7 +50,7 @@ export default class HomeScreen extends React.Component {
                     }
                 >
                     <BoostCashWithBackground />
-                    <BoostMore />
+                    <BoostMore {...this.props} />
                     <HR />
                     <BoostBattleBanner />
                     <HR />
