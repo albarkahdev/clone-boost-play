@@ -5,7 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { HR } from '../../common/line/hr';
 import * as ImageAssets from '../../_ui/_image/images';
 import { getWidth, getHeight } from '../../_ui/_measurement/measurements'
-import { dataTerdekat } from '../boost_spot/dummy/datadummy';
+import { dataTerdekat } from '../boost_spot/_dummy/datadummy';
 
 
 const ListBoostSpotItem = (props) => {

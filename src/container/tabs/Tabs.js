@@ -25,7 +25,7 @@ class LoveScreen extends React.Component {
 	}
 }
 
-const IconLove = (props) => {
+const IconBoost = (props) => {
 	return (
 		<View
 			style={{
@@ -52,7 +52,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 		case "Boost Spot":
 			return <MaterialIcons name="store" size={25} color={tintColor} />;
 		case "Love":
-			return <IconLove />;
+			return <IconBoost />;
 		case "My Deals":
 			return <MaterialCommunityIcons name="ticket-percent" size={25} color={tintColor} />;
 		case "Account":
@@ -80,11 +80,11 @@ const getTabBarOnPress = (navigation, defaultHandler) => {
 
 export default createBottomTabNavigator(
 	{
-		Account: { screen: AccountStack },
+		Home: { screen: HomeScreen },
 		"Boost Spot": { screen: BoostSpotStack },
 		Love: { screen: LoveScreen },
 		"My Deals": { screen: MyDealsStack },
-		Home: { screen: HomeScreen },
+		Account: { screen: AccountStack },
 	},
 	{
 		defaultNavigationOptions: ({ navigation }) => ({

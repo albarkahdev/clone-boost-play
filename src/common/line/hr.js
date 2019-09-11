@@ -4,5 +4,5 @@ import { width } from '../../_ui/_measurement/measurements';
 
 
 export const HR = (props) => {
-    return <View style={{ alignSelf: "center", width: props.full ? width : (width - 36), backgroundColor: '#E0DEE0', height: 1 }} />;
+    return <View style={{ alignSelf: "center", width: props.full ? width : (width - 36), backgroundColor: "#E0DEE0", height: 1 }} />;
 }

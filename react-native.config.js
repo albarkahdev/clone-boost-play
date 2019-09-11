@@ -8,5 +8,10 @@ module.exports = {
         ios: null,
       },
     },
+    'react-native-device-info': {
+      platforms: {
+        ios: null,
+      },
+    },
   }
 };

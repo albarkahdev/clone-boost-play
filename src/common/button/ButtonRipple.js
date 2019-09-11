@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, TouchableWithoutFeedback, TouchableOpacity, Animated, Easing, Platform } from 'react-native';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import { width, getHeight } from '../../_ui/_measurement/measurements';
+
 
 const styles = StyleSheet.create({
     pageContainer: {
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
     },
 });
 
-class ButtonRipple extends PureComponent {
+export default class ButtonRipple extends PureComponent {
     constructor(props, context) {
         super(props, context);
 
@@ -34,23 +35,32 @@ class ButtonRipple extends PureComponent {
         this.onPressedIn = this.onPressedIn.bind(this);
         this.onPressedOut = this.onPressedOut.bind(this);
     }
+
+    static defaultProps = {
+        color: "#7B797B",
+        width,
+        height: getHeight(50)
+    }
+
     onPressedIn() {
         Animated.timing(this.state.scaleValue, {
             toValue: 1,
             duration: 225,
             easing: Easing.bezier(0.0, 0.0, 0.2, 1),
-            useNativeDriver: Platform.OS === 'android',
+            useNativeDriver: true,
         }).start();
     }
+
     onPressedOut() {
         Animated.timing(this.state.opacityValue, {
             toValue: 0,
-            useNativeDriver: Platform.OS === 'android',
+            useNativeDriver: true,
         }).start(() => {
             this.state.scaleValue.setValue(0.01);
             this.state.opacityValue.setValue(this.state.maxOpacity);
         });
     }
+
     renderRippleView() {
         const { color, width, height, } = this.props;
         const { scaleValue, opacityValue } = this.state;
@@ -73,6 +83,7 @@ class ButtonRipple extends PureComponent {
             />
         );
     }
+
     render() {
         const { width, height, style, onPress, children } = this.props;
         const iconContainer = { width: width, height: height };
@@ -95,5 +106,3 @@ class ButtonRipple extends PureComponent {
         );
     }
 }
-
-export default ButtonRipple;
