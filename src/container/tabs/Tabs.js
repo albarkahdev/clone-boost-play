@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from '../home/home';
 import BoostSpotStack from '../boost_spot/boost_spot';
 import MyDealsStack from '../my_deals/my_deals';
+import AccountStack from '../account/account';
 import * as Icon from '../../_ui/_icon/icons';
 
 export const TemplateScreen = ({ title }) => {
@@ -21,12 +22,6 @@ export const TemplateScreen = ({ title }) => {
 class LoveScreen extends React.Component {
 	render() {
 		return <TemplateScreen title="Love" />;
-	}
-}
-
-class AccountScreen extends React.Component {
-	render() {
-		return <TemplateScreen title="Account" />;
 	}
 }
 
@@ -77,19 +72,19 @@ const getTabBarLabel = (navigation, focused, tintColor) => {
 
 const getTabBarOnPress = (navigation, defaultHandler) => {
 	const { routeName } = navigation.state;
-	if (routeName === "Account") {
-		return navigation.navigate('Login');
-	}
+	// if (routeName === "Account") {
+	// 	return navigation.navigate('Login');
+	// }
 	return defaultHandler();
 };
 
 export default createBottomTabNavigator(
 	{
+		Account: { screen: AccountStack },
+		"Boost Spot": { screen: BoostSpotStack },
+		Love: { screen: LoveScreen },
 		"My Deals": { screen: MyDealsStack },
 		Home: { screen: HomeScreen },
-		Love: { screen: LoveScreen },
-		"Boost Spot": { screen: BoostSpotStack },
-		Account: { screen: AccountScreen },
 	},
 	{
 		defaultNavigationOptions: ({ navigation }) => ({
