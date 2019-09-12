@@ -12,16 +12,6 @@ import { HR } from '../../common';
 
 
 export default class HomeScreen extends React.Component {
-	static navigationOptions = ({ navigation }) => {
-		return {
-            headerLeft: (
-                <View style={{ padding: 10 }}>
-                    <Text>BoostSpot</Text>
-                </View>
-            ),
-		};
-	};
-
     render() {
         return (
             <SafeAreaView style={{ flex: 1, /* backgroundColor: "#EF3026" */ }}>

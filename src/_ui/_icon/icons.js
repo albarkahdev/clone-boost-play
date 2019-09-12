@@ -15,9 +15,12 @@ import password from '../../../assets/icon/password.png';
 import qr from '../../../assets/icon/qr.png';
 import referral from '../../../assets/icon/referral.png';
 import voucher from '../../../assets/icon/voucher.png';
+import money from '../../../assets/icon/money.png';
+import store from '../../../assets/icon/store.png';
+import ticket from '../../../assets/icon/ticket.png';
 
 export {
     rate, boost, reward, invite, medicall, boostquest, boostbattle,
     boostplay, bahasa, coupon, exit, faq, mystory, password, qr, referral,
-    voucher
+    voucher, money, store, ticket
 };

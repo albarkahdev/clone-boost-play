@@ -51,7 +51,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 			return <AntDesign name="home" size={25} color={tintColor} />;
 		case "Boost Spot":
 			return <MaterialIcons name="store" size={25} color={tintColor} />;
-		case "Love":
+		case "Love Tabs":
 			return <IconBoost />;
 		case "My Deals":
 			return <MaterialCommunityIcons name="ticket-percent" size={25} color={tintColor} />;
@@ -64,7 +64,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
 
 const getTabBarLabel = (navigation, focused, tintColor) => {
 	const { routeName } = navigation.state;
-	if (routeName === "Love") {
+	if (routeName === "Love Tabs") {
 		return <View />;
 	}
 	return <Text style={{ color: tintColor, textAlign: 'center' }}>{routeName}</Text>;
@@ -75,6 +75,9 @@ const getTabBarOnPress = (navigation, defaultHandler) => {
 	// if (routeName === "Account") {
 	// 	return navigation.navigate('Login');
 	// }
+	if (routeName === "Love Tabs") {
+		return navigation.navigate('Love');
+	}
 	return defaultHandler();
 };
 
@@ -82,7 +85,7 @@ export default createBottomTabNavigator(
 	{
 		Home: { screen: HomeScreen },
 		"Boost Spot": { screen: BoostSpotStack },
-		Love: { screen: LoveScreen },
+		"Love Tabs": { screen: LoveScreen },
 		"My Deals": { screen: MyDealsStack },
 		Account: { screen: AccountStack },
 	},
