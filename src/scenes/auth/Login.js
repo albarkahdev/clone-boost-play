@@ -11,7 +11,9 @@ import {
 	withNextInputAutoFocusInput
 } from "react-native-formik";
 import { TextField } from "react-native-material-textfield";
+
 import { width } from '../../_ui/_measurement/measurements';
+import { text } from '../../_ui'
 
 const MyInput = compose(
 	handleTextInput,
@@ -23,7 +25,7 @@ const validationSchema = Yup.object().shape({
 	phone: Yup.number()
 		.required("Nomor telepon tidak boleh kosong")
 		.min(8, "Nomor telepon terlalu sedikit"),
-		// .max(15, "Maximal 15 karakter"),
+	// .max(15, "Maximal 15 karakter"),
 	password: Yup.string()
 		.required("Password tidak boleh kosong")
 		.min(2, "Cukup yakin ini akan diretas")
@@ -43,7 +45,7 @@ export default class LoginScreen extends React.Component {
 			),
 			headerRight: (
 				<TouchableOpacity style={{ padding: 10 }} onPress={() => navigation.navigate("Register")}>
-					<Text style={{ fontSize: 16, color: "#747274" }}>DAFTAR</Text>
+					<Text style={text.XVIGray}>DAFTAR</Text>
 				</TouchableOpacity>
 			),
 		};
@@ -64,22 +66,20 @@ export default class LoginScreen extends React.Component {
 						return (
 							<Form style={{ marginHorizontal: 16 }}>
 								<View style={{ alignItems: "center", marginBottom: 10, marginTop: 80 }}>
-									<Text style={{ fontSize: 25, color: "black" }}>MASUK</Text>
+									<Text style={text.XXV}>MASUK</Text>
 								</View>
 								<MyInput label="Masukan nomor telepon kamu" name="phone" type="phone" keyboardType="phone-pad" returnKeyType="next" baseColor="#747274" tintColor="#747274" />
-								{/* <View style={{ flex: 1, marginRight: 38.5 }}> */}
-									<MyInput label="Masukan password" name="password" type={self.state.showpassword ? "name" : "password"} baseColor="#747274" tintColor="#747274" />
-								{/* </View> */}
+								<MyInput label="Masukan password" name="password" type={self.state.showpassword ? "name" : "password"} baseColor="#747274" tintColor="#747274" />
 								<View style={{ position: "relative" }}>
 									<TouchableOpacity style={{ padding: 10, position: "absolute", top: -50, left: (width - 70) }} onPress={() => self.setShowPassword(self)}>
 										<Octicons name={self.state.showpassword ? "eye" : "eye-closed"} size={20} color="#747274" />
 									</TouchableOpacity>
 								</View>
 								<View style={{ alignItems: "flex-end", marginBottom: 50, marginTop: 30 }}>
-									<Text style={{ fontSize: 16, color: "#747274" }} onPress={() => alert("Lupa password kamu?")}>Lupa password kamu?</Text>
+									<Text style={text.XVIGray} onPress={() => alert("Lupa password kamu?")}>Lupa password kamu?</Text>
 								</View>
 								<TouchableOpacity style={{ padding: 15, borderColor: "#EF3026", borderWidth: 1, justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
-									<Text style={{ fontSize: 13, fontWeight: "bold", color: "#EF3026" }}>MASUK</Text>
+									<Text style={text.XIIVRedB}>MASUK</Text>
 								</TouchableOpacity>
 							</Form>
 						);

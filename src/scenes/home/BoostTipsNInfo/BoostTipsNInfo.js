@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-import { TitleHome } from '../../../common';
+import { TitleHome } from '../../../components';
 import * as ImageAssets from '../../../_ui/_image/images';
 import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
 

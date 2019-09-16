@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { StyleSheet, Alert, View, TouchableOpacity, Image, Text } from 'react-native';
-import * as Icon from '../../../_ui/_icon/icons';
+
+import { text } from '../../../_ui';
+import * as Icons from '../../../_ui/_icon/icons';
 import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
 
 
@@ -9,15 +11,15 @@ const UIBoostBattleItem = ({ item, onVote }) => {
     const participant2 = item.participant[1];
     return (
         <View style={[{ flexDirection: "row", marginHorizontal: 16, marginBottom: 16, position: "relative" }, item.id === 1 && { marginTop: 30 }]}>
-            <Image source={Icon.boostbattle} style={{ position: "absolute", width: 50, height: 50, zIndex: 20, left: getWidth(148), top: getHeight(60) }} />
+            <Image source={Icons.boostbattle} style={{ position: "absolute", width: 50, height: 50, zIndex: 20, left: getWidth(148), top: getHeight(60) }} />
             <TouchableOpacity style={[styles.imgWrapper, borderLeft]} onPress={() => onVote(0)}>
                 <Image source={participant1.image} style={[styles.img, borderLeft]} />
                 <View style={[styles.imgOver, borderLeft, { borderRightWidth: 1.5, borderRightColor: "white" }]}>
                     <View style={{ backgroundColor: "rgba(36, 147, 150, 0.8)", width: 200, height: 200, borderRadius: 100, bottom: -85, left: -45, alignItems: "flex-end", justifyContent: "flex-start", paddingVertical: 35, paddingRight: 35 }}>
                         <View>
-                            <Text style={{ color: "white", fontSize: 12, fontWeight: "bold", marginBottom: 10 }}>{item.title_battle}</Text>
+                            <Text style={[text.XIIWhiteB, { marginBottom: 10 }]}>{item.title_battle}</Text>
                             <View style={{ paddingVertical: 5, padding: 5, borderRadius: 1, borderColor: "white", borderWidth: 1, alignItems: "center" }}>
-                                <Text style={{ color: "white", fontSize: 12, fontWeight: "bold" }}>{participant1.title}</Text>
+                                <Text style={text.XIIWhiteB}>{participant1.title}</Text>
                             </View>
                         </View>
                     </View>
@@ -27,9 +29,9 @@ const UIBoostBattleItem = ({ item, onVote }) => {
                 <Image source={participant2.image} style={[styles.img, borderRight]} />
                 <View style={[styles.imgOver, borderRight]}>
                     <View style={{ backgroundColor: "rgba(239, 48, 38, 0.8)", width: 200, height: 200, borderRadius: 100, bottom: -85, right: -45, alignItems: "flex-start", justifyContent: "flex-start", paddingVertical: 35, paddingLeft: 35 }}>
-                        <Text style={{ color: "white", fontSize: 12, fontWeight: "bold", marginBottom: 10 }}>{item.title_battle}</Text>
+                        <Text style={[text.XIIWhiteB, { marginBottom: 10 }]}>{item.title_battle}</Text>
                         <View style={{ paddingVertical: 5, padding: 5, borderRadius: 1, borderColor: "white", borderWidth: 1, alignItems: "center" }}>
-                            <Text style={{ color: "white", fontSize: 12, fontWeight: "bold" }}>{participant2.title}</Text>
+                            <Text style={text.XIIWhiteB}>{participant2.title}</Text>
                         </View>
                     </View>
                 </View>

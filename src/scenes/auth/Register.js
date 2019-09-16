@@ -10,6 +10,8 @@ import {
 	withNextInputAutoFocusInput
 } from "react-native-formik";
 import { TextField } from "react-native-material-textfield";
+
+import { text } from '../..//_ui';
 import { width, getHeight, getWidth } from '../../_ui/_measurement/measurements';
 import * as Icons from '../../_ui/_icon/icons';
 
@@ -46,7 +48,7 @@ export default class RegisterScreen extends React.Component {
 			<SafeAreaView style={{ flex: 1 }}>
 				<View style={{ marginHorizontal: 16 }}>
 					<Image source={Icons.boostplay} style={{ width: getWidth(150), height: getHeight(100), resizeMode: 'contain' }} />
-					<Text style={{ fontSize: 15, color: "black" }}>Masukkan nomor telepon kamu dan verifikasi menggunakan kode OTP yang dikirimkan ke nomor kamu.</Text>
+					<Text style={text.XV}>Masukkan nomor telepon kamu dan verifikasi menggunakan kode OTP yang dikirimkan ke nomor kamu.</Text>
 				</View>
 				<Formik
 					onSubmit={values => console.log(values)}
@@ -58,12 +60,12 @@ export default class RegisterScreen extends React.Component {
 								<MyInput label="Masukan nomor telepon kamu" name="phone" type="phone" keyboardType="phone-pad" returnKeyType="next" baseColor="#747274" tintColor="#747274" />
 								<View style={{ position: "relative" }}>
 									<TouchableOpacity style={{ padding: 5, position: "absolute", top: -50, left: (width - 110), borderColor: "#EF3026", borderWidth: 1, borderRadius: 5 }} onPress={() => alert(`Kode OTP mu: ${Math.floor(Math.random() * 10000)}`)}>
-										<Text style={{ fontSize: 13, color: "#EF3026" }}>Kirim OTP</Text>
+										<Text style={text.XIIVRed}>Kirim OTP</Text>
 									</TouchableOpacity>
 								</View>
 								<MyInput label="OTP" name="otp" type="name" baseColor="#747274" tintColor="#747274" />
 								<TouchableOpacity style={{ padding: 15, backgroundColor: isEmptyTextInput ? "#EF3026" : "#9C9A9C", justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
-									<Text style={{ fontSize: 13, fontWeight: "bold", color: "white" }}>VERIFIKASI</Text>
+									<Text style={text.XIIVWhiteB}>VERIFIKASI</Text>
 								</TouchableOpacity>
 							</Form>
 						);

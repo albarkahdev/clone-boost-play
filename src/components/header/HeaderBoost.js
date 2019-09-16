@@ -2,6 +2,8 @@ import React from 'react';
 import { View, TouchableOpacity, Image, Text } from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
+import { text } from '../../_ui';
 import * as ImageAssets from '../../_ui/_image/images';
 
 export default HeaderBoost = ({ right }) => {
@@ -19,7 +21,7 @@ export default HeaderBoost = ({ right }) => {
                     (
                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                             <MaterialIcons name="videogame-asset" size={25} color="#EF3026" style={{ transform: [{ rotate: "-45deg" }] }} />
-                            <Text style={{ marginLeft: 5, color: "#EF3026", fontWeight: "bold" }}>0</Text>
+                            <Text style={[text.XIIVRedB, { marginLeft: 5 }]}>0</Text>
                         </View>
                     )
                 }

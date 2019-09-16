@@ -1,15 +1,15 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import HeaderBoost from '../../common/header/HeaderBoost';
+import HeaderBoost from '../../components/header/HeaderBoost';
 import ProfileAccount from './ProfileAccount/ProfileAccount';
 import QRNStory from './QRNStroy/QRNStory';
 import UserRewards from './UserRewards/UserRewards';
 import FunZone from './FunZone/Funzone';
 import Pengaturan from './Pengaturan/Pengaturan';
 import VersionComp from './VersionComp/VersionComp';
-import ScrollViewWithRefresh from '../../common/scroll/ScrollViewWithRefresh';
-import { HR } from '../../common/line/hr';
+import ScrollViewWithRefresh from '../../components/scroll/ScrollViewWithRefresh';
+import { HR } from '../../components/line/hr';
 
 
 class AccountScreen extends React.Component {

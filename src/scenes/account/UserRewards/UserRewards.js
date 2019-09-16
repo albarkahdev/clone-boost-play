@@ -1,5 +1,7 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, Text } from 'react-native';
+
+import { text } from '../../../_ui';
 import { getWidth } from '../../../_ui/_measurement/measurements';
 import * as Icons from '../../../_ui/_icon/icons';
 
@@ -10,8 +12,8 @@ const UserRewardsItem = ({ borderRight, value, name, imagename }) => {
                 <Image source={Icons[imagename]} style={{ height: getWidth(35) }} resizeMode="contain" />
             </View>
             <View>
-                <Text style={{ fontSize: 15, fontWeight: "bold" }}>{value}</Text>
-                <Text style={{ fontSize: 13 }}>{name}</Text>
+                <Text style={text.XVIGrayB}>{value}</Text>
+                <Text style={text.XIVMidGray}>{name}</Text>
             </View>
         </TouchableOpacity>
     )

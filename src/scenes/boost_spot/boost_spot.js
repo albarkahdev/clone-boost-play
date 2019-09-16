@@ -1,10 +1,10 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import HeaderBoost from '../../common/header/HeaderBoost';
+import HeaderBoost from '../../components/header/HeaderBoost';
 import SearchBoostSpot from './SearchBoostSpot/SearchBoostSpot';
 import ListBoostSpot from './ListBoostSpot/ListBoostSpot';
-import { HR } from '../../common/line/hr';
+import { HR } from '../../components/line/hr';
 import { dataPilihanEditor, dataTerdekat } from './_dummy/datadummy';
 
 

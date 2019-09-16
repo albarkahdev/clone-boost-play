@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, FlatList, View, TouchableOpacity, Image, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+
+import { text } from '../../../_ui';
 import * as Icons from '../../../_ui/_icon/icons';
 import * as ImageAssets from '../../../_ui/_image/images';
 import { getWidth, getHeight } from '../../../_ui/_measurement/measurements';
@@ -16,12 +18,12 @@ const BoostSpotItem = (props) => {
                 <View style={styles.imgOver}>
                     <LinearGradient start={{ x: 0, y: 0.5 }} end={{ x: 0, y: 1 }} colors={['rgba(250, 248, 250, 0)', 'rgba(0, 0, 0, 0.8)']} style={{ width: getWidth(160), height: getHeight(150), alignItems: "flex-start", justifyContent: "space-between", flexDirection: star ? "column" : "column-reverse", padding: 10, paddingLeft: 5, paddingBottom: 10 }}>
                         {star && <Image source={Icons.rate} style={{ width: 35, height: 35 }} />}
-                        <Text style={{ fontSize: 15, color: "white", textAlign: "left" }}>{description}</Text>
+                        <Text style={text.XVWhiteLeft}>{description}</Text>
                     </LinearGradient>
                 </View>
             </View>
             <View style={{ marginTop: 5, flexWrap: "nowrap", width: getWidth(160) }}>
-                <Text style={{ fontSize: 15, fontWeight: "bold" }}>{title}</Text>
+                <Text style={text.XVB}>{title}</Text>
             </View>
         </TouchableOpacity>
     );
@@ -32,9 +34,9 @@ export default BoostSpotCard = (props) => {
     return (
         <View style={{ marginHorizontal: 16, marginVertical: 10, marginTop: props.marginTop }}>
             <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 15 }}>
-                <Text style={{ fontSize: 20, fontWeight: "bold" }}>{title}</Text>
+                <Text style={text.XXB}>{title}</Text>
                 <TouchableOpacity onPress={() => props.navigation.navigate("AllListBoostSpot", { boostspots: props.data })}>
-                    <Text style={{ fontSize: 16, fontWeight: "bold" }}>Lihat semua ></Text>
+                    <Text style={text.XVIB}>Lihat semua ></Text>
                 </TouchableOpacity>
             </View>
             <FlatList

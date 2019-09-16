@@ -9,7 +9,9 @@ import HomeScreen from '../home/home';
 import BoostSpotStack from '../boost_spot/boost_spot';
 import MyDealsStack from '../my_deals/my_deals';
 import AccountStack from '../account/account';
-import * as Icon from '../../_ui/_icon/icons';
+
+import { text } from '../../_ui';
+import * as Icons from '../../_ui/_icon/icons';
 
 
 class LoveScreen extends React.Component {
@@ -35,7 +37,7 @@ const IconBoost = (props) => {
 				justifyContent: 'center',
 				alignItems: 'center',
 			}}>
-			<Image source={Icon.boost} style={{ width: 32, height: 32 }} />
+			<Image source={Icons.boost} style={{ width: 32, height: 32 }} />
 		</View>
 	);
 }
@@ -64,14 +66,14 @@ const getTabBarLabel = (navigation, focused, tintColor) => {
 	if (routeName === "Love Tabs") {
 		return <View />;
 	}
-	return <Text style={{ color: tintColor, textAlign: 'center' }}>{routeName}</Text>;
+	return <Text style={[{ color: tintColor }, text.center]}>{routeName}</Text>;
 };
 
 const getTabBarOnPress = (navigation, defaultHandler) => {
 	const { routeName } = navigation.state;
-	// if (routeName === "Account") {
-	// 	return navigation.navigate('Login');
-	// }
+	if (routeName === "Account") {
+		return navigation.navigate('Login');
+	}
 	if (routeName === "Love Tabs") {
 		return navigation.navigate('Love');
 	}

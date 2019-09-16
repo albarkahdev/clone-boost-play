@@ -2,8 +2,11 @@ import React from 'react';
 import { SafeAreaView, View, Image, Text } from 'react-native';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
-import HeaderBoost from '../../common/header/HeaderBoost';
-import ScrollViewWithRefresh from '../../common/scroll/ScrollViewWithRefresh';
+
+import HeaderBoost from '../../components/header/HeaderBoost';
+import ScrollViewWithRefresh from '../../components/scroll/ScrollViewWithRefresh';
+
+import { text } from '../../_ui';
 import * as ImageAssets from '../../_ui/_image/images';
 import { width, getWidth, getHeight } from '../../_ui/_measurement/measurements';
 
@@ -12,16 +15,16 @@ const TemplateEmptyDeals = ({ title, description, highlightTitle, navigation }) 
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollViewWithRefresh>
-                <View style={{ flex: 1, height: getHeight(600), justifyContent: "center", alignItems: "center" }}>
+                <View style={{ flex: 1, height: getHeight(500), justifyContent: "center", alignItems: "center" }}>
                     <View>
                         <Image source={ImageAssets.deal} style={{ width: getWidth(180), height: getHeight(150), resizeMode: "contain" }} />
                     </View>
                     <View style={{ justifyContent: "center", alignItems: "center", marginVertical: 10 }}>
-                        <Text style={{ fontSize: 20, color: highlightTitle ? "black" : "#B0AEB0" }}>{title}</Text>
-                        <Text style={{ fontSize: 16, color: "#B0AEB0", textAlign: "center", width: (width * 0.9) }}>{description}</Text>
+                        <Text style={[ text.XX, !highlightTitle && { color: "rgb(161,159,161)" }]}>{title}</Text>
+                        <Text style={[ text.XVIMidGrayCenter, { width: (width * 0.9) }]}>{description}</Text>
                     </View>
                     <View style={{ justifyContent: "center", alignItems: "center", marginVertical: 10 }}>
-                        <Text style={{ fontSize: 20, color: "#EF3026" }} onPress={() => navigation.navigate("Boost Spot")}>Kunjungi Boost Spot</Text>
+                        <Text style={text.XXRed} onPress={() => navigation.navigate("Boost Spot")}>Kunjungi Boost Spot</Text>
                     </View>
                 </View>
             </ScrollViewWithRefresh>

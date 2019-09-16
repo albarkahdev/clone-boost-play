@@ -2,10 +2,12 @@ import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { SafeAreaView, FlatList, View, TouchableOpacity, Image, Text } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { HR } from '../../common/line/hr';
+
+import { HR } from '../../components/line/hr';
+
+import { text } from '../../_ui';
 import * as ImageAssets from '../../_ui/_image/images';
 import { getWidth, getHeight } from '../../_ui/_measurement/measurements'
-import { dataTerdekat } from '../boost_spot/_dummy/datadummy';
 
 
 const ListBoostSpotItem = (props) => {
@@ -20,11 +22,11 @@ const ListBoostSpotItem = (props) => {
                 </View>
                 <View style={{ flex: 1.3, justifyContent: "space-between", alignItems: "flex-start" }}>
                     <View>
-                        <Text style={{ fontSize: 14, fontWeight: "bold" }}>{title}</Text>
-                        <Text style={{ fontSize: 14 }}>{description}</Text>
+                        <Text style={text.XIVB}>{title}</Text>
+                        <Text style={text.XIV}>{description}</Text>
                     </View>
                     <TouchableOpacity style={{ justifyContent: "center", alignItems: "center", backgroundColor: "#EF3026", padding: 13, width: "100%" }}>
-                        <Text style={{ fontSize: 14, color: "white" }}>KUNJUNGI</Text>
+                        <Text style={text.XIVWhite}>KUNJUNGI</Text>
                     </TouchableOpacity>
                 </View>
             </View>

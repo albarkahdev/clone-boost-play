@@ -1,14 +1,17 @@
 import React from 'react';
 import { View, TouchableOpacity, Image, Text } from 'react-native';
-import { TitleHome } from '../../../common';
-import * as Icon from '../../../_ui/_icon/icons';
+
+import { TitleHome } from '../../../components';
+
+import { text } from '../../../_ui';
+import * as Icons from '../../../_ui/_icon/icons';
 import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
 
 const CardItemBoostMore = ({title, onPress, icon, width, borderless}) => {
     return (
         <TouchableOpacity onPress={onPress} style={[{ flex: 1, justifyContent: 'center', alignItems: 'center', paddingVertical: 10 },  !borderless && {borderRightWidth: 1, borderRightColor: '#F8F6F8' }]}>
-            <Image source={Icon[icon]} style={{ width: getWidth(width) || getWidth(33), height: getWidth(33), marginBottom: getHeight(10) }} />
-            <Text style={{ fontSize: 13, color: "#807E80" }}>{title}</Text>
+            <Image source={Icons[icon]} style={{ width: getWidth(width) || getWidth(33), height: getWidth(33), marginBottom: getHeight(10) }} />
+            <Text style={text.XIVMidGray}>{title}</Text>
         </TouchableOpacity>
     );
 };
@@ -33,7 +36,7 @@ const CardBoostMore = (props) => {
 
 export default BoostMore = (props) => {
     return (
-        <View style={{ marginTop: 10, marginBottom: 16, marginHorizontal: 18 }}>
+        <View style={{ marginBottom: 16, marginHorizontal: 18 }}>
             <TitleHome title="BoostMore" />
             <CardBoostMore {...props} />
         </View>

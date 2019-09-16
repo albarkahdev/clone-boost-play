@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, FlatList, Image, Text } from 'react-native';
-import { TitleHome } from '../../../common';
+
+import { TitleHome } from '../../../components';
+import { text } from '../../../_ui';
 import * as ImageAssets from '../../../_ui/_image/images';
 
 const ListItemBoostQuiz = ({ item }) => {
@@ -23,12 +25,12 @@ const ListItemBoostQuiz = ({ item }) => {
             </View>
             {
                 item.id === 3 && (<View style={{ backgroundColor: "rgba(0, 0, 0, 0.5)", position: "absolute", width: 301, height: "60%", borderTopLeftRadius: 10, borderTopRightRadius: 10 }}>
-                    <Text style={{ color: "white", fontSize: 16, fontWeight: "bold", margin: 10 }}>BOOST QUIZ</Text>
+                    <Text style={[text.XVIWhiteB, { margin: 10 }]}>BOOST QUIZ</Text>
                 </View>)
             }
             <View style={{ flex: 1, alignItems: "flex-start", justifyContent: "space-around", padding: 10, paddingLeft: 15 }}>
-                <Text style={{ fontSize: 16, fontWeight: "bold" }}>{title}</Text>
-                <Text style={{ fontSize: 16 }}>{description}</Text>
+                <Text style={text.XVIB}>{title}</Text>
+                <Text style={text.XVI}>{description}</Text>
             </View>
         </View>
     )
