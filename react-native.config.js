@@ -13,5 +13,15 @@ module.exports = {
         ios: null,
       },
     },
+    'react-native-splash-screen': {
+      platforms: {
+        ios: null,
+      },
+    },
+    'react-native-linear-gradient': {
+      platforms: {
+        ios: null,
+      }
+    }
   }
 };

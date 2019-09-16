@@ -1,17 +1,21 @@
-import React from 'react';
+/**
+ * routes.js
+ *
+ * route app
+ *
+ * @albarkahdev
+ */
+
+
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import LoginScreen from './src/container/auth/Login';
-import RegisterScreen from './src/container/auth/Register';
-import TabsScreen from './src/container/tabs/Tabs';
-import LoveScreenStack from './src/container/love/love';
-import AllListBoostSpotStack from './src/container/all_list_boost_spot/AllListBoostSpot';
 
-export default class App extends React.Component {
-	render() {
-		return <AppContainer />;
-	}
-};
+import LoginScreen from '../scenes/auth/Login';
+import RegisterScreen from '../scenes/auth/Register';
+import TabsScreen from '../scenes/tabs/Tabs';
+import LoveScreenStack from '../scenes/love/love';
+import AllListBoostSpotStack from '../scenes/all_list_boost_spot/AllListBoostSpot';
+
 
 const AuthStack = createStackNavigator(
 	{
@@ -44,4 +48,4 @@ const RootStack = createStackNavigator(
 	}
 )
 
-const AppContainer = createAppContainer(RootStack);
+export default Routes = createAppContainer(RootStack);

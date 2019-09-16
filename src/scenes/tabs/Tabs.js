@@ -11,17 +11,14 @@ import MyDealsStack from '../my_deals/my_deals';
 import AccountStack from '../account/account';
 import * as Icon from '../../_ui/_icon/icons';
 
-export const TemplateScreen = ({ title }) => {
-	return (
-		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-			<Text>{title}!</Text>
-		</View>
-	);
-}
 
 class LoveScreen extends React.Component {
 	render() {
-		return <TemplateScreen title="Love" />;
+		return (
+			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+				<Text>Love!</Text>
+			</View>
+		);
 	}
 }
 
