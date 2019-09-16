@@ -2,10 +2,7 @@ import React from 'react';
 import { StyleSheet, FlatList, View, TouchableOpacity, Image, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import { text } from '../../../_ui';
-import * as Icons from '../../../_ui/_icon/icons';
-import * as ImageAssets from '../../../_ui/_image/images';
-import { getWidth, getHeight } from '../../../_ui/_measurement/measurements';
+import { text, Icons, ImageAssets, getWidth, getHeight } from '../../../_ui';
 
 const BoostSpotItem = (props) => {
     const { item, index, lengthdata } = props;

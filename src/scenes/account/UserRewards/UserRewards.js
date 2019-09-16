@@ -1,9 +1,7 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, Text } from 'react-native';
 
-import { text } from '../../../_ui';
-import { getWidth } from '../../../_ui/_measurement/measurements';
-import * as Icons from '../../../_ui/_icon/icons';
+import { text, Icons, getWidth } from '../../../_ui';
 
 const UserRewardsItem = ({ borderRight, value, name, imagename }) => {
     return (

@@ -3,9 +3,7 @@ import { Image, Text } from 'react-native';
 
 import ButtonRipple from '../../../components/button/ButtonRipple';
 
-import { text } from '../../../_ui';
-import { getWidth, width } from '../../../_ui/_measurement/measurements';
-import * as Icons from '../../../_ui/_icon/icons';
+import { text, Icons, getWidth, width } from '../../../_ui';
 
 export default ListItemAccount = ({ imagename, title }) => {
     return (

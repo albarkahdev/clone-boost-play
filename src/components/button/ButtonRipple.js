@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, TouchableWithoutFeedback, TouchableOpacity, Animated, Easing, Platform } from 'react-native';
-import { width, getHeight } from '../../_ui/_measurement/measurements';
+
+import { width, getHeight } from '../../_ui';
 
 
 const styles = StyleSheet.create({

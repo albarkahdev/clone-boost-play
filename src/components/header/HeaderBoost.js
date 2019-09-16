@@ -3,8 +3,7 @@ import { View, TouchableOpacity, Image, Text } from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-import { text } from '../../_ui';
-import * as ImageAssets from '../../_ui/_image/images';
+import { text, ImageAssets } from '../../_ui';
 
 export default HeaderBoost = ({ right }) => {
     return {

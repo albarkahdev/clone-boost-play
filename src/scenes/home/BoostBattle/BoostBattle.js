@@ -1,5 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
+
 import * as ImageAssets from '../../../_ui/_image/images';
 import { BoostBattleItem } from './BoostBattleItem';
 

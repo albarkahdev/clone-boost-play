@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-import * as ImageAssets from '../../../_ui/_image/images';
-import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
+
+import { ImageAssets, getWidth, getHeight } from '../../../_ui';
 
 export default BoostPromo = (props) => {
     return (

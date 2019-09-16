@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { width } from '../../_ui/_measurement/measurements';
+import { width } from '../../_ui';
 
 
 export const HR = (props) => {

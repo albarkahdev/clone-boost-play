@@ -5,10 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import { HR } from '../../components/line/hr';
 
-import { text } from '../../_ui';
-import * as ImageAssets from '../../_ui/_image/images';
-import { getWidth, getHeight } from '../../_ui/_measurement/measurements'
-
+import { text, ImageAssets, getWidth, getHeight } from '../../_ui';
 
 const ListBoostSpotItem = (props) => {
     const { item, index, lengthdata } = props;

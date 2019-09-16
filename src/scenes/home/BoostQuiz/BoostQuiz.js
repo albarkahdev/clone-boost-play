@@ -2,8 +2,7 @@ import React from 'react';
 import { View, FlatList, Image, Text } from 'react-native';
 
 import { TitleHome } from '../../../components';
-import { text } from '../../../_ui';
-import * as ImageAssets from '../../../_ui/_image/images';
+import { text, ImageAssets } from '../../../_ui';
 
 const ListItemBoostQuiz = ({ item }) => {
     const { title, description, image } = item;

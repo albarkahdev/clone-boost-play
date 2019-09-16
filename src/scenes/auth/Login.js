@@ -12,8 +12,7 @@ import {
 } from "react-native-formik";
 import { TextField } from "react-native-material-textfield";
 
-import { width } from '../../_ui/_measurement/measurements';
-import { text } from '../../_ui'
+import { text, width } from '../../_ui'
 
 const MyInput = compose(
 	handleTextInput,

@@ -1,9 +1,11 @@
 import React from 'react';
 import { SafeAreaView, Animated, Easing, View, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
+
 import ActionButton from '../../components/button/CircularActionButton/ActionButton';
-import { getWidth } from '../../_ui/_measurement/measurements';
-import * as Icons from '../../_ui/_icon/icons';
+import { getWidth } from '../../_ui';
+
+import { Icons } from '../../_ui';
 
 
 class LoveScreen extends React.Component {

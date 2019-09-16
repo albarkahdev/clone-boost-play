@@ -2,9 +2,7 @@ import React from 'react';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { View, Image, Text } from 'react-native';
 
-import { text } from '../../../_ui';
-import * as ImageAssets from '../../../_ui/_image/images';
-import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
+import { text, ImageAssets, getHeight, getWidth } from '../../../_ui';
 
 const BackgroundHalfCircle = (props) => {
 	return (

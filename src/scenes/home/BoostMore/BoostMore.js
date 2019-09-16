@@ -3,9 +3,7 @@ import { View, TouchableOpacity, Image, Text } from 'react-native';
 
 import { TitleHome } from '../../../components';
 
-import { text } from '../../../_ui';
-import * as Icons from '../../../_ui/_icon/icons';
-import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
+import { text, Icons, getHeight, getWidth } from '../../../_ui';
 
 const CardItemBoostMore = ({title, onPress, icon, width, borderless}) => {
     return (

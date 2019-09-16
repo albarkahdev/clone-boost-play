@@ -2,8 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
-import { text } from '../../../_ui';
-import { getWidth, width } from '../../../_ui/_measurement/measurements';
+import { text, getWidth } from '../../../_ui';
 
 export default Profile = (props) => {
     return (

@@ -10,8 +10,7 @@ import BoostSpotStack from '../boost_spot/boost_spot';
 import MyDealsStack from '../my_deals/my_deals';
 import AccountStack from '../account/account';
 
-import { text } from '../../_ui';
-import * as Icons from '../../_ui/_icon/icons';
+import { text, Icons } from '../../_ui';
 
 
 class LoveScreen extends React.Component {

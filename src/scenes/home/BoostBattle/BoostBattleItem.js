@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Alert, View, TouchableOpacity, Image, Text } from 'react-native';
 
-import { text } from '../../../_ui';
-import * as Icons from '../../../_ui/_icon/icons';
-import { getHeight, getWidth } from '../../../_ui/_measurement/measurements';
+import { text, Icons, getHeight, getWidth } from '../../../_ui';
 
 
 const UIBoostBattleItem = ({ item, onVote }) => {

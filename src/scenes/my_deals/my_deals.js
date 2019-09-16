@@ -6,9 +6,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import HeaderBoost from '../../components/header/HeaderBoost';
 import ScrollViewWithRefresh from '../../components/scroll/ScrollViewWithRefresh';
 
-import { text } from '../../_ui';
-import * as ImageAssets from '../../_ui/_image/images';
-import { width, getWidth, getHeight } from '../../_ui/_measurement/measurements';
+import { text, ImageAssets, width, getWidth, getHeight } from '../../_ui';
 
 
 const TemplateEmptyDeals = ({ title, description, highlightTitle, navigation }) => {
