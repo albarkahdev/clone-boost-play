@@ -8,7 +8,7 @@ const UIBoostBattleItem = ({ item, onVote }) => {
     const participant1 = item.participant[0];
     const participant2 = item.participant[1];
     return (
-        <View style={[{ flexDirection: "row", marginHorizontal: 16, marginBottom: 16, position: "relative" }, item.id === 1 && { marginTop: 30 }]}>
+        <View style={[{ flexDirection: "row", marginHorizontal: 16, marginBottom: 16, position: "relative" }]}>
             <Image source={Icons.boostbattle} style={{ position: "absolute", width: 50, height: 50, zIndex: 20, left: getWidth(148), top: getHeight(60) }} />
             <TouchableOpacity style={[styles.imgWrapper, borderLeft]} onPress={() => onVote(0)}>
                 <Image source={participant1.image} style={[styles.img, borderLeft]} />

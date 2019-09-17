@@ -1,3 +1,10 @@
+/**
+ * account.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';

@@ -1,3 +1,10 @@
+/**
+ * my_deals.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView, View, Image, Text } from 'react-native';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
@@ -7,7 +14,6 @@ import HeaderBoost from '../../components/header/HeaderBoost';
 import ScrollViewWithRefresh from '../../components/scroll/ScrollViewWithRefresh';
 
 import { text, ImageAssets, width, getWidth, getHeight } from '../../_ui';
-
 
 const TemplateEmptyDeals = ({ title, description, highlightTitle, navigation }) => {
     return (

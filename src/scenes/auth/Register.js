@@ -1,3 +1,10 @@
+/**
+ * register.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView, View, Image, TouchableOpacity, Text } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -11,7 +18,7 @@ import {
 } from "react-native-formik";
 import { TextField } from "react-native-material-textfield";
 
-import { text, Icons, width, getHeight, getWidth } from '../../_ui';
+import { text, Icons, width, getHeight, getWidth, colorScheme } from '../../_ui';
 
 const MyInput = compose(
 	handleTextInput,
@@ -57,12 +64,12 @@ export default class RegisterScreen extends React.Component {
 							<Form style={{ marginHorizontal: 16 }}>
 								<MyInput label="Masukan nomor telepon kamu" name="phone" type="phone" keyboardType="phone-pad" returnKeyType="next" baseColor="#747274" tintColor="#747274" />
 								<View style={{ position: "relative" }}>
-									<TouchableOpacity style={{ padding: 5, position: "absolute", top: -50, left: (width - 110), borderColor: "#EF3026", borderWidth: 1, borderRadius: 5 }} onPress={() => alert(`Kode OTP mu: ${Math.floor(Math.random() * 10000)}`)}>
+									<TouchableOpacity style={{ padding: 5, position: "absolute", top: -50, left: (width - 110), borderColor: colorScheme.color1, borderWidth: 1, borderRadius: 5 }} onPress={() => alert(`Kode OTP mu: ${Math.floor(Math.random() * 10000)}`)}>
 										<Text style={text.XIIVRed}>Kirim OTP</Text>
 									</TouchableOpacity>
 								</View>
 								<MyInput label="OTP" name="otp" type="name" baseColor="#747274" tintColor="#747274" />
-								<TouchableOpacity style={{ padding: 15, backgroundColor: isEmptyTextInput ? "#EF3026" : "#9C9A9C", justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
+								<TouchableOpacity style={{ padding: 15, backgroundColor: isEmptyTextInput ? colorScheme.color1 : "#9C9A9C", justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
 									<Text style={text.XIIVWhiteB}>VERIFIKASI</Text>
 								</TouchableOpacity>
 							</Form>

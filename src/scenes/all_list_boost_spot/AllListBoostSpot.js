@@ -1,3 +1,18 @@
+/**
+ * AllListBoostSpot.js
+ *
+ *
+ * ## Function
+ * Show all list boost spot when user click "Lihat Semua"
+ * 
+ * ## PropTypes
+ *  @param boostspots: object that contain properti title anda array data
+ * 
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { SafeAreaView, FlatList, View, TouchableOpacity, Image, Text } from 'react-native';
@@ -5,7 +20,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import { HR } from '../../components/line/hr';
 
-import { text, ImageAssets, getWidth, getHeight } from '../../_ui';
+import { text, ImageAssets, getWidth, getHeight, colorScheme } from '../../_ui';
 
 const ListBoostSpotItem = (props) => {
     const { item, index, lengthdata } = props;
@@ -22,7 +37,7 @@ const ListBoostSpotItem = (props) => {
                         <Text style={text.XIVB}>{title}</Text>
                         <Text style={text.XIV}>{description}</Text>
                     </View>
-                    <TouchableOpacity style={{ justifyContent: "center", alignItems: "center", backgroundColor: "#EF3026", padding: 13, width: "100%" }}>
+                    <TouchableOpacity style={{ justifyContent: "center", alignItems: "center", backgroundColor: colorScheme.color1, padding: 13, width: "100%" }}>
                         <Text style={text.XIVWhite}>KUNJUNGI</Text>
                     </TouchableOpacity>
                 </View>

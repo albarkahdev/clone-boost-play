@@ -1,8 +1,10 @@
 import React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, View } from 'react-native';
 
-import * as ImageAssets from '../../../_ui/_image/images';
+import { TitleHome } from '../../../components';
 import { BoostBattleItem } from './BoostBattleItem';
+
+import { ImageAssets } from '../../../_ui';
 
 
 const dataBoostBattle = [
@@ -42,10 +44,16 @@ const dataBoostBattle = [
 
 export default BoostBattle = (props) => {
     return (
-        <FlatList
-            keyExtractor={(item, index) => index.toString()}
-            data={dataBoostBattle}
-            renderItem={({ item }) => <BoostBattleItem item={item} />}
-        />
+        <View>
+            <View style={{ marginHorizontal: 16, marginTop: 30 }}>
+                <TitleHome title={"Boost Battle"} bold />
+                <TitleHome title={"Pilih tim kamu dan dapatkan skor tertinggi"} />
+            </View>
+            <FlatList
+                keyExtractor={(item, index) => index.toString()}
+                data={dataBoostBattle}
+                renderItem={({ item }) => <BoostBattleItem item={item} />}
+            />
+        </View>
     );
 };

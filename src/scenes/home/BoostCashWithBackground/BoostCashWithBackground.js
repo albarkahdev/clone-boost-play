@@ -2,11 +2,11 @@ import React from 'react';
 import Entypo from 'react-native-vector-icons/Entypo';
 import { View, Image, Text } from 'react-native';
 
-import { text, ImageAssets, getHeight, getWidth } from '../../../_ui';
+import { text, ImageAssets, getHeight, getWidth, colorScheme } from '../../../_ui';
 
 const BackgroundHalfCircle = (props) => {
 	return (
-		<View style={{ backgroundColor: '#EF3026', width: getWidth(488), height: getHeight(230), borderBottomLeftRadius: getHeight(400), borderBottomRightRadius: getHeight(400), zIndex: -100, position: 'relative', top: getHeight(-50), left: getWidth(-60) }}>
+		<View style={{ backgroundColor: colorScheme.color1, width: getWidth(488), height: getHeight(230), borderBottomLeftRadius: getHeight(400), borderBottomRightRadius: getHeight(400), zIndex: -100, position: 'relative', top: getHeight(-50), left: getWidth(-60) }}>
 			<View style={{ backgroundColor: 'rgba(255,255,255,0.2)', width: getWidth(488), height: getHeight(253), borderTopLeftRadius: getHeight(300), borderTopRightRadius: getHeight(300), position: 'absolute', top: getHeight(110), left: getWidth(5) }} />
 		</View>
 	);

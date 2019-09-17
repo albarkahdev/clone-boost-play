@@ -1,3 +1,10 @@
+/**
+ * login.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView, View, TouchableOpacity, Text } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -12,7 +19,7 @@ import {
 } from "react-native-formik";
 import { TextField } from "react-native-material-textfield";
 
-import { text, width } from '../../_ui'
+import { text, width, colorScheme } from '../../_ui'
 
 const MyInput = compose(
 	handleTextInput,
@@ -77,7 +84,7 @@ export default class LoginScreen extends React.Component {
 								<View style={{ alignItems: "flex-end", marginBottom: 50, marginTop: 30 }}>
 									<Text style={text.XVIGray} onPress={() => alert("Lupa password kamu?")}>Lupa password kamu?</Text>
 								</View>
-								<TouchableOpacity style={{ padding: 15, borderColor: "#EF3026", borderWidth: 1, justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
+								<TouchableOpacity style={{ padding: 15, borderColor: colorScheme.color1, borderWidth: 1, justifyContent: 'center', alignItems: 'center' }} onPress={props.handleSubmit}>
 									<Text style={text.XIIVRedB}>MASUK</Text>
 								</TouchableOpacity>
 							</Form>

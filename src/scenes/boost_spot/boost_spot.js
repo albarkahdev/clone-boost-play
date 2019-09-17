@@ -1,3 +1,10 @@
+/**
+ * boost_spot.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView, ScrollView, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';

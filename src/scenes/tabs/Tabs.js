@@ -1,3 +1,10 @@
+/**
+ * Tabs.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -7,21 +14,11 @@ import { Platform, View, Image, Text } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from '../home/home';
 import BoostSpotStack from '../boost_spot/boost_spot';
+import LoveScreen from '../love/love_screen';
 import MyDealsStack from '../my_deals/my_deals';
 import AccountStack from '../account/account';
 
-import { text, Icons } from '../../_ui';
-
-
-class LoveScreen extends React.Component {
-	render() {
-		return (
-			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-				<Text>Love!</Text>
-			</View>
-		);
-	}
-}
+import { text, Icons, colorScheme } from '../../_ui';
 
 const IconBoost = (props) => {
 	return (
@@ -29,7 +26,7 @@ const IconBoost = (props) => {
 			style={{
 				position: 'absolute',
 				top: Platform.OS === 'android' ? -25 : -20,
-				backgroundColor: '#EF3026',
+				backgroundColor: colorScheme.color1,
 				borderRadius: 45,
 				width: 67,
 				height: 67,
@@ -98,7 +95,7 @@ export default createBottomTabNavigator(
 			}
 		}),
 		tabBarOptions: {
-			activeTintColor: '#EF3026',
+			activeTintColor: colorScheme.color1,
 			inactiveTintColor: 'gray',
 			adaptive: true
 		},

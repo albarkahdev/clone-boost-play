@@ -1,3 +1,10 @@
+/**
+ * love_stack.js
+ *
+ * @albarkhdev
+ */
+
+
 import React from 'react';
 import { SafeAreaView, Animated, Easing, View, Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
